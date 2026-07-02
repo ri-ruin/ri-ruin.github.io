@@ -1,12 +1,138 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
-    background-color: #f0f0f0;
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --text: #f0f6fc;
+  --muted: #8b949e;
+  --accent: #58a6ff;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+.light {
+  --bg: #ffffff;
+  --surface: #f5f5f5;
+  --text: #111;
+  --muted: #555;
+  --accent: #0969da;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: var(--surface);
+  position: sticky;
+  top: 0;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 10px 0;
+}
+
+.description {
+  max-width: 600px;
+  margin: auto;
+  color: var(--muted);
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 5px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid var(--accent);
+}
+
+/* SECTIONS */
+.section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.card {
+  background: var(--surface);
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* BACK TO TOP */
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
 }
